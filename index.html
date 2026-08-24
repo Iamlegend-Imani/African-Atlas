@@ -1,242 +1,47 @@
 <!doctype html>
-<html lang="en" data-theme="light" data-motion="on">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The African Atlas maps the interconnected systems shaping Africa's future — one question, one map, one system at a time." />
-  <meta name="theme-color" content="#f4efe3" />
-  <title>The African Atlas — Mapping the Systems Shaping Africa's Future</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="The African Atlas maps Africa's interconnected systems and turns questions into knowledge, intelligence, ventures and enduring infrastructure.">
+<title>The African Atlas — Mapping the Systems Shaping Africa's Future</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4efe5;--bg2:#e9e0d0;--ink:#203027;--muted:#70776f;--line:rgba(32,48,39,.13);--gold:#a87832;--gold2:#d7b36d;--moss:#4f6757;--card:rgba(255,252,245,.72);--shadow:0 24px 70px rgba(66,55,35,.08)}
+html[data-theme=dark]{--bg:#111814;--bg2:#182119;--ink:#efe7d8;--muted:#a8aca1;--line:rgba(239,231,216,.13);--gold:#d2aa63;--gold2:#e3c78d;--moss:#8aa08f;--card:rgba(255,255,255,.05);--shadow:0 28px 90px rgba(0,0,0,.28)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 8% 7%,color-mix(in srgb,var(--gold2) 14%,transparent),transparent 28%),radial-gradient(circle at 92% 24%,color-mix(in srgb,var(--moss) 11%,transparent),transparent 32%),var(--bg);color:var(--ink);font:400 14px/1.6 Manrope,system-ui,sans-serif;transition:.35s;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input{font:inherit;color:inherit}.shell{width:min(1160px,calc(100% - 40px));margin:auto}.mono{font:500 9px DM Mono,monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+header{height:68px;width:min(1200px,calc(100% - 28px));margin:10px auto 0;padding:0 15px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:10px;z-index:50;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(18px);box-shadow:0 8px 30px rgba(0,0,0,.04)}.brand{display:flex;align-items:center;gap:10px}.mark{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font:500 9px DM Mono,monospace}.brand strong{display:block;font:500 16px Newsreader,serif}.brand small{display:block;font-size:7px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}nav{display:flex;gap:25px;font-size:9px;letter-spacing:.12em;text-transform:uppercase}.controls{display:flex;gap:6px}.pill,.cta{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 11px;cursor:pointer;font-size:8px;letter-spacing:.1em;text-transform:uppercase}.cta{display:inline-flex;gap:20px;align-items:center;padding:11px 15px}.cta.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.hero{min-height:calc(100vh - 88px);display:grid;grid-template-columns:1fr .95fr;gap:54px;align-items:center;padding:45px 0 35px}.hero h1{font:300 clamp(56px,7vw,96px)/.9 Newsreader,serif;letter-spacing:-.05em;margin:12px 0}.hero h1 em,.gold{font-style:italic;color:var(--gold)}.hero h2{font:400 clamp(22px,2.6vw,31px)/1.1 Newsreader,serif;margin:20px 0 10px}.hero p.copy{max-width:650px;color:var(--muted);font-size:13px}.actions{display:flex;gap:8px;margin-top:24px}.sequence{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:24px}.sequence span{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 9px;font:500 7px DM Mono,monospace;letter-spacing:.08em;text-transform:uppercase}.sequence i{font-style:normal;color:var(--gold)}
+.constellation{height:520px;border:1px solid var(--line);border-radius:32px;background:linear-gradient(145deg,var(--card),transparent),radial-gradient(circle at center,color-mix(in srgb,var(--gold2) 14%,transparent),transparent 38%);position:relative;overflow:hidden;box-shadow:var(--shadow)}.constellation:before,.constellation:after{content:"";position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);border:1px solid var(--line);border-radius:50%;width:300px;height:300px}.constellation:after{width:190px;height:190px}.core,.node{position:absolute;border:1px solid var(--line);border-radius:50%;background:var(--bg);display:grid;place-items:center;text-align:center;font:500 7px DM Mono,monospace;letter-spacing:.08em}.core{width:94px;height:94px;left:50%;top:48%;transform:translate(-50%,-50%);color:var(--gold);border-color:var(--gold)}.node{width:66px;height:66px;animation:breathe 5s ease-in-out infinite}.n1{left:10%;top:15%}.n2{left:43%;top:7%}.n3{right:11%;top:17%}.n4{left:8%;top:54%}.n5{left:37%;bottom:6%}.n6{right:10%;bottom:11%}.n7{right:4%;top:48%}.n8{left:26%;top:42%}.n9{right:27%;top:40%}.caption{position:absolute;left:20px;right:20px;bottom:16px;border-top:1px solid var(--line);padding-top:9px;display:flex;justify-content:space-between;color:var(--muted);font:400 7px DM Mono,monospace;letter-spacing:.08em}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:23px;overflow:hidden;background:var(--card);margin-bottom:72px}.principles article{padding:17px 18px;display:flex;gap:12px}.principles article+article{border-left:1px solid var(--line)}.principles b{display:block;font-size:11px}.principles p{margin:0;color:var(--muted);font-size:10px}.principles span{font:500 8px DM Mono,monospace;color:var(--gold)}
+.engine{padding-bottom:80px}.heading{display:grid;grid-template-columns:1fr .55fr;gap:35px;align-items:end;margin-bottom:28px}.heading h2{font:300 clamp(44px,5vw,66px)/.94 Newsreader,serif;letter-spacing:-.04em;margin:8px 0 0}.heading>p{margin:0 0 5px;color:var(--muted);font-size:11px}.console{display:grid;grid-template-columns:195px 1fr;min-height:500px;border:1px solid var(--line);border-radius:27px;background:var(--card);overflow:hidden;box-shadow:var(--shadow)}.tabs{padding:12px;border-right:1px solid var(--line);background:color-mix(in srgb,var(--bg2) 66%,transparent);display:flex;flex-direction:column;gap:4px}.tab{border:0;background:transparent;padding:11px;border-radius:13px;text-align:left;cursor:pointer;color:var(--muted);font-size:10px}.tab span{font:500 7px DM Mono,monospace;color:var(--gold);margin-right:8px}.tab.active{background:var(--ink);color:var(--bg)}.panel{padding:38px 42px}.panel[hidden]{display:none}.panel h3{font:300 clamp(33px,4vw,50px)/.98 Newsreader,serif;letter-spacing:-.035em;margin:10px 0 16px;max-width:830px}.lead{color:var(--muted);font-size:12px;max-width:780px}.flow{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:25px 0}.flow span{padding:7px 9px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--card) 75%,transparent);font:500 7px DM Mono,monospace;letter-spacing:.06em;text-transform:uppercase}.flow i{font-style:normal;color:var(--gold)}blockquote{margin:25px 0 0;padding:15px 18px;border-left:2px solid var(--gold);background:color-mix(in srgb,var(--card) 80%,transparent);font:italic 300 23px Newsreader,serif}.twocol,.layers,.ecosystem{display:grid;gap:9px;margin-top:22px}.twocol{grid-template-columns:1fr 1fr}.layers{grid-template-columns:repeat(4,1fr)}.ecosystem{grid-template-columns:repeat(3,1fr)}.tile{padding:15px;border:1px solid var(--line);border-radius:17px;background:color-mix(in srgb,var(--card) 82%,transparent)}.tile strong{display:block;font:400 20px Newsreader,serif;margin:5px 0}.tile p{margin:0;color:var(--muted);font-size:10px}.tile small{font:500 7px DM Mono,monospace;color:var(--gold);letter-spacing:.08em;text-transform:uppercase}.systems{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}.chip{border:1px solid var(--line);background:transparent;border-radius:999px;padding:7px 9px;font-size:7px;letter-spacing:.07em;text-transform:uppercase;cursor:pointer}.chip.active{background:var(--ink);color:var(--bg)}.mini{height:320px;border:1px solid var(--line);border-radius:24px;position:relative;background:radial-gradient(circle at center,color-mix(in srgb,var(--gold2) 13%,transparent),transparent 36%)}.mini .core{width:76px;height:76px}.mini .node{width:53px;height:53px;font-size:6px;animation:none}.mini .node.active{background:var(--ink);color:var(--bg);transform:scale(1.12)}
+.maps{padding:0 0 75px}.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(275px,1fr);gap:9px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x proximity}.card{min-height:285px;border:1px solid var(--line);border-radius:21px;background:var(--card);padding:17px;display:flex;flex-direction:column;scroll-snap-align:start;position:relative;overflow:hidden}.card:before{content:"";position:absolute;inset:-30%;opacity:.1;background:repeating-radial-gradient(ellipse at 75% 25%,transparent 0 21px,var(--gold) 22px 23px,transparent 24px 36px);transform:rotate(-12deg)}.card>div{position:relative;z-index:1}.cardtop,.cardfoot{display:flex;justify-content:space-between;font:500 7px DM Mono,monospace;letter-spacing:.08em;text-transform:uppercase}.cardbody{margin-top:auto}.card h3{font:300 29px/.98 Newsreader,serif;margin:0 0 10px}.card p{font-size:8px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}.cardfoot{border-top:1px solid var(--line);padding-top:10px;margin-top:14px}.closing{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:end;padding:58px 0;border-top:1px solid var(--line)}.closing h2{font:300 clamp(38px,4.7vw,60px)/.95 Newsreader,serif;margin:8px 0 12px}.closing p{color:var(--muted);font-size:11px}.join{padding:20px;border:1px solid var(--line);border-radius:21px;background:var(--card)}.join label{display:block;margin:12px 0 8px;font:500 7px DM Mono,monospace;color:var(--gold);letter-spacing:.1em;text-transform:uppercase}.join input{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;padding:8px 0;font:400 19px Newsreader,serif;outline:none}.join button{margin-top:13px}.join small{display:block;margin-top:9px;color:var(--muted);font-size:7px}footer{padding:25px 0 38px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr .8fr 1fr;gap:25px;font-size:8px;color:var(--muted)}footer strong{font:400 15px Newsreader,serif;color:var(--ink)}footer .links{display:flex;gap:12px;text-transform:uppercase;letter-spacing:.08em}footer .meta{text-align:right;font:400 6px DM Mono,monospace;letter-spacing:.07em}
+@keyframes breathe{0%,100%{opacity:.65}50%{opacity:1;transform:translateY(-3px)}}
+@media(max-width:880px){nav{display:none}.hero{grid-template-columns:1fr;min-height:auto}.constellation{height:440px}.principles{grid-template-columns:1fr}.principles article+article{border-left:0;border-top:1px solid var(--line)}.heading,.closing{grid-template-columns:1fr}.console{grid-template-columns:1fr}.tabs{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}.tab{white-space:nowrap}.systems{grid-template-columns:1fr}.layers{grid-template-columns:1fr 1fr}.ecosystem{grid-template-columns:1fr 1fr}footer{grid-template-columns:1fr 1fr}footer .meta{text-align:left;grid-column:span 2}}
+@media(max-width:560px){.shell{width:calc(100% - 28px)}header{height:60px}.brand small,.controls .pill:first-child{display:none}.hero{padding-top:45px}.hero h1{font-size:54px}.constellation{height:360px}.node{width:52px;height:52px;font-size:6px}.core{width:76px;height:76px}.principles{margin-bottom:55px}.heading h2{font-size:44px}.console{min-height:0}.panel{padding:25px 18px}.panel h3{font-size:35px}.twocol,.layers,.ecosystem{grid-template-columns:1fr}.mini{height:270px}.rail{grid-auto-columns:82vw}.closing{padding:48px 0}footer{grid-template-columns:1fr}footer .meta{grid-column:auto}.actions{flex-direction:column}.cta{justify-content:space-between}}
+</style>
 </head>
 <body>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
-
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="The African Atlas home">
-      <span class="brand-mark" aria-hidden="true">AA</span>
-      <span class="brand-copy"><strong>The African Atlas</strong><small>Institution in formation</small></span>
-    </a>
-
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="#atlas">Atlas</a>
-      <a href="#systems">Systems</a>
-      <a href="#method">Method</a>
-      <a href="#future">Future</a>
-    </nav>
-
-    <div class="controls">
-      <button class="control" id="motionToggle" type="button" aria-pressed="false" title="Toggle motion">Motion</button>
-      <button class="control" id="themeToggle" type="button" aria-pressed="false" title="Toggle theme">Dark</button>
-      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav">Menu</button>
-    </div>
-  </header>
-
-  <div class="mobile-nav" id="mobileNav" hidden>
-    <a href="#atlas">Atlas</a>
-    <a href="#systems">Systems</a>
-    <a href="#method">Method</a>
-    <a href="#future">Future</a>
-  </div>
-
-  <main id="top">
-    <section class="hero shell">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">A living map of an interconnected continent</p>
-        <h1>The African<br><em>Atlas.</em></h1>
-        <p class="hero-line">Mapping the systems shaping Africa's future.</p>
-        <p class="hero-body">Africa is not a collection of isolated industries, markets or problems. It is a living network of people, infrastructure, capital, knowledge, culture and movement. The African Atlas exists to make those relationships visible.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#atlas">Enter the Atlas <span>↘</span></a>
-          <a class="button ghost" href="#manifesto">Read the premise</a>
-        </div>
-        <div class="hero-note">
-          <span>01</span>
-          <p>The publication is the first layer.<br>The institution is the larger idea.</p>
-        </div>
-      </div>
-
-      <div class="hero-map reveal" aria-label="Abstract network map of Africa's interconnected systems">
-        <div class="map-frame">
-          <svg class="africa-network" viewBox="0 0 560 690" role="img" aria-labelledby="mapTitle mapDesc">
-            <title id="mapTitle">The African Atlas systems network</title>
-            <desc id="mapDesc">An abstract Africa-shaped constellation of connected nodes representing food, logistics, capital, health, energy, knowledge and technology systems.</desc>
-            <defs>
-              <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-              <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="currentColor" stroke-opacity=".08" stroke-width="1"/></pattern>
-            </defs>
-            <rect width="560" height="690" fill="url(#grid)" opacity=".8"/>
-            <g class="contours" fill="none" stroke="currentColor" stroke-opacity=".11">
-              <path d="M146 78C228 35 353 42 436 110s91 166 50 228c-35 53-86 69-100 129-11 48 2 96-35 143-43 55-103 57-147 24-52-39-41-99-64-147-25-53-78-68-85-132-7-65 45-88 41-145-5-64-7-94 50-132z"/>
-              <path d="M165 101c71-37 176-30 242 25 68 56 72 142 42 192-31 51-80 66-95 124-13 49 1 87-31 126-33 41-81 45-117 17-43-33-36-83-57-124-24-47-67-62-74-113-7-54 39-76 37-126-3-55 4-89 53-121z"/>
-              <path d="M194 132c57-25 134-15 184 27 51 43 57 103 35 144-25 48-70 64-85 109-16 45-2 76-27 105-25 29-59 29-85 7-31-26-30-64-48-96-22-39-55-56-57-95-2-40 32-59 34-95 3-42 11-81 49-106z"/>
-            </g>
-            <g class="routes" fill="none" stroke="currentColor" stroke-width="1.3" stroke-opacity=".45">
-              <path d="M158 145Q245 205 338 178Q420 154 462 246"/>
-              <path d="M126 266Q220 249 286 324T431 390"/>
-              <path d="M181 421Q257 368 344 435T331 603"/>
-              <path d="M210 166Q194 281 260 366T257 572"/>
-              <path d="M383 215Q345 286 347 355T398 495"/>
-              <path d="M150 336Q252 317 354 357Q417 382 437 452"/>
-              <path d="M256 250Q312 219 372 258"/>
-              <path d="M206 501Q271 479 337 510"/>
-            </g>
-            <g class="nodes" fill="currentColor" filter="url(#glow)">
-              <circle cx="158" cy="145" r="5"/><circle cx="210" cy="166" r="4"/><circle cx="338" cy="178" r="5"/><circle cx="383" cy="215" r="4"/><circle cx="462" cy="246" r="5"/>
-              <circle cx="126" cy="266" r="4"/><circle cx="256" cy="250" r="4"/><circle cx="372" cy="258" r="5"/><circle cx="150" cy="336" r="5"/><circle cx="286" cy="324" r="6"/>
-              <circle cx="347" cy="355" r="5"/><circle cx="431" cy="390" r="4"/><circle cx="181" cy="421" r="4"/><circle cx="260" cy="366" r="5"/><circle cx="344" cy="435" r="5"/>
-              <circle cx="437" cy="452" r="4"/><circle cx="206" cy="501" r="5"/><circle cx="337" cy="510" r="5"/><circle cx="257" cy="572" r="4"/><circle cx="331" cy="603" r="5"/>
-            </g>
-            <g class="map-labels">
-              <text x="70" y="118">KNOWLEDGE</text><text x="380" y="125">CAPITAL</text><text x="73" y="315">FOOD</text><text x="365" y="330">LOGISTICS</text><text x="85" y="472">HUMAN</text><text x="364" y="484">ENERGY</text><text x="207" y="646">COMMERCE</text>
-            </g>
-          </svg>
-          <div class="map-caption"><span>System map / 00</span><span>Move across the network</span></div>
-          <div class="cursor-orbit" aria-hidden="true"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="statement shell reveal" id="manifesto">
-      <p class="section-index">00 / PREMISE</p>
-      <div class="statement-grid">
-        <h2>We have spent too long looking at Africa <em>in fragments.</em></h2>
-        <div class="statement-copy">
-          <p>Agriculture separated from logistics. Technology separated from people. Capital separated from infrastructure. Health separated from food. Policy separated from lived reality.</p>
-          <p><strong>But nothing exists in isolation.</strong> The unit of understanding is not the sector. It is the relationship.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="systems shell" id="systems">
-      <div class="section-heading reveal">
-        <p class="section-index">01 / SYSTEMS</p>
-        <h2>One continent.<br><em>Many living systems.</em></h2>
-        <p>Choose a system. Watch what it touches.</p>
-      </div>
-
-      <div class="system-explorer reveal">
-        <div class="system-stage" id="systemStage">
-          <svg viewBox="0 0 900 520" aria-hidden="true" class="system-lines" id="systemLines"></svg>
-          <button class="system-node central" data-system="africa" style="--x:50%;--y:50%"><strong>Africa</strong><small>the whole</small></button>
-          <button class="system-node" data-system="food" style="--x:17%;--y:22%"><strong>Food</strong><small>grow · move · nourish</small></button>
-          <button class="system-node" data-system="logistics" style="--x:49%;--y:14%"><strong>Logistics</strong><small>movement · access</small></button>
-          <button class="system-node" data-system="capital" style="--x:81%;--y:25%"><strong>Capital</strong><small>fund · allocate · compound</small></button>
-          <button class="system-node" data-system="health" style="--x:14%;--y:68%"><strong>Health</strong><small>care · vitality</small></button>
-          <button class="system-node" data-system="knowledge" style="--x:43%;--y:82%"><strong>Knowledge</strong><small>learn · research · transmit</small></button>
-          <button class="system-node" data-system="technology" style="--x:75%;--y:72%"><strong>Technology</strong><small>amplify · connect</small></button>
-          <button class="system-node" data-system="governance" style="--x:88%;--y:49%"><strong>Governance</strong><small>rules · trust · institutions</small></button>
-          <button class="system-node" data-system="energy" style="--x:29%;--y:45%"><strong>Energy</strong><small>power · enable</small></button>
-          <button class="system-node" data-system="commerce" style="--x:65%;--y:46%"><strong>Commerce</strong><small>exchange · scale</small></button>
-        </div>
-        <div class="system-readout">
-          <span id="readoutIndex">SYSTEM 00</span>
-          <h3 id="readoutTitle">Everything is connected.</h3>
-          <p id="readoutBody">The Atlas begins by refusing the false separation between sectors. Every system creates pressure, possibility and feedback in every other system.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="atlas shell" id="atlas">
-      <div class="section-heading split reveal">
-        <div><p class="section-index">02 / THE ATLAS</p><h2>One question.<br><em>One map.</em></h2></div>
-        <p>The first public expression of African Atlas is simple: ask better questions, trace the relationships, and leave behind a map someone else can use.</p>
-      </div>
-
-      <div class="maps-grid">
-        <article class="map-card feature reveal">
-          <div class="topo"></div>
-          <div class="map-card-top"><span>MAP 001</span><span>FOUNDATIONS</span></div>
-          <div class="map-card-content"><h3>Why don't more African businesses scale?</h3><p>Capital × logistics × systems × trust × infrastructure.</p></div>
-          <div class="map-card-foot"><span>Investigation / forthcoming</span><span>↗</span></div>
-        </article>
-        <article class="map-card reveal">
-          <div class="topo"></div><div class="map-card-top"><span>MAP 002</span><span>FOOD</span></div><div class="map-card-content"><h3>How does food actually move?</h3><p>From soil to aggregation to movement to market.</p></div><div class="map-card-foot"><span>Field map</span><span>↗</span></div>
-        </article>
-        <article class="map-card reveal">
-          <div class="topo"></div><div class="map-card-top"><span>MAP 003</span><span>TRUST</span></div><div class="map-card-content"><h3>What is the economics of trust?</h3><p>How relationships become infrastructure.</p></div><div class="map-card-foot"><span>Systems note</span><span>↗</span></div>
-        </article>
-        <article class="map-card reveal">
-          <div class="topo"></div><div class="map-card-top"><span>MAP 004</span><span>MOVEMENT</span></div><div class="map-card-content"><h3>What makes a corridor become an economy?</h3><p>Roads × trade × people × time × information.</p></div><div class="map-card-foot"><span>Network map</span><span>↗</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="method shell" id="method">
-      <div class="section-heading reveal">
-        <p class="section-index">03 / METHOD</p>
-        <h2>Map what is.<br><em>See what could be.</em></h2>
-      </div>
-      <div class="method-track reveal">
-        <div class="method-step"><span>01</span><h3>Question</h3><p>Begin with a question worth understanding.</p></div>
-        <div class="method-step"><span>02</span><h3>Map</h3><p>Trace the actors, flows, incentives and constraints.</p></div>
-        <div class="method-step"><span>03</span><h3>Connect</h3><p>Reveal relationships across systems that appear separate.</p></div>
-        <div class="method-step"><span>04</span><h3>Find leverage</h3><p>Identify where a small shift can change the larger system.</p></div>
-        <div class="method-step"><span>05</span><h3>Build</h3><p>Turn understanding into ventures, infrastructure and tools.</p></div>
-        <div class="method-step"><span>06</span><h3>Steward</h3><p>Keep the whole coherent as the ecosystem grows.</p></div>
-      </div>
-    </section>
-
-    <section class="future shell" id="future">
-      <div class="future-intro reveal">
-        <p class="section-index">04 / WHAT THIS BECOMES</p>
-        <h2>The publication is the doorway.<br><em>Not the destination.</em></h2>
-        <p>African Atlas starts by making systems legible. Over time, that understanding can become intelligence, ventures, infrastructure and institutions that exist in the physical world—not only on a screen.</p>
-      </div>
-
-      <div class="layers reveal">
-        <article><span>01</span><div><h3>Knowledge</h3><p>Maps, research, questions, frameworks and field understanding.</p></div><small>SEE</small></article>
-        <article><span>02</span><div><h3>Intelligence</h3><p>Patterns, data, decision tools and shared institutional memory.</p></div><small>UNDERSTAND</small></article>
-        <article><span>03</span><div><h3>Ventures</h3><p>Build and connect companies where the maps reveal real leverage.</p></div><small>CREATE</small></article>
-        <article><span>04</span><div><h3>Infrastructure</h3><p>Durable systems that continue creating value with or without technology.</p></div><small>ENDURE</small></article>
-      </div>
-
-      <div class="institution reveal">
-        <p class="kicker">AN INSTITUTION IN FORMATION</p>
-        <h3>Not a media company.<br>Not a tech company.<br><em>A container for connected possibility.</em></h3>
-        <p>The Atlas can hold many expressions without becoming fragmented: research, systems thinking, technology, physical infrastructure, commercial ventures, capital and human flourishing. Different forms. One worldview.</p>
-      </div>
-    </section>
-
-    <section class="manifesto shell reveal">
-      <p class="section-index">05 / MANIFESTO</p>
-      <div class="manifesto-text">
-        <p>Food connects to health.</p>
-        <p>Health connects to knowledge.</p>
-        <p>Knowledge connects to technology.</p>
-        <p>Technology connects to commerce.</p>
-        <p>Commerce connects to movement.</p>
-        <p>Movement connects to infrastructure.</p>
-        <p>Infrastructure connects to capital.</p>
-        <p>Capital connects to possibility.</p>
-        <p class="accent">Nothing is separate.</p>
-      </div>
-      <div class="manifesto-end">
-        <p>To understand Africa, we have to understand the relationships between its systems.</p>
-        <strong>One question. One map. One connected continent.</strong>
-      </div>
-    </section>
-
-    <section class="join shell reveal">
-      <div><p class="section-index">06 / BEGIN HERE</p><h2>Become an<br><em>Explorer.</em></h2></div>
-      <form class="join-form" id="joinForm">
-        <p>Join the first people following the Atlas as it takes shape. No noise. Just new Maps and significant developments.</p>
-        <label><span>Email</span><input type="email" id="email" placeholder="you@somewhere.world" required></label>
-        <button class="button primary" type="submit">Join the Atlas <span>↗</span></button>
-        <small id="formNote">Prototype signup — mailing infrastructure comes next.</small>
-      </form>
-    </section>
-  </main>
-
-  <footer class="footer shell">
-    <div><span class="brand-mark">AA</span><p><strong>The African Atlas</strong><br>Mapping the systems shaping Africa's future.</p></div>
-    <div class="footer-links"><a href="#atlas">Maps</a><a href="#systems">Systems</a><a href="#method">Method</a><a href="#manifesto">Manifesto</a></div>
-    <div class="footer-meta"><span>AFRICA / WORLD</span><span>EST. 2026</span><span>BUILDING SLOWLY, THINKING LONG</span></div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<header><a href="#top" class="brand"><span class="mark">AA</span><span><strong>The African Atlas</strong><small>Institution in formation</small></span></a><nav><a href="#engine">Atlas Engine</a><a href="#maps">Maps</a><a href="#join">Join</a></nav><div class="controls"><button class="pill" id="motion">Motion</button><button class="pill" id="theme">Dark</button></div></header>
+<main id="top">
+<section class="hero shell"><div><p class="mono">An institution in formation</p><h1>The African <em>Atlas.</em></h1><h2>Mapping the systems shaping Africa's future.</h2><p class="copy">Not a newsletter. Not a think tank. Not a technology company. Those may become expressions of it. African Atlas is a long-term container for understanding how Africa's systems connect — and using that understanding to build what should exist next.</p><div class="actions"><a class="cta primary" href="#engine">Open the Atlas Engine <span>↘</span></a><a class="cta" href="#maps">Explore the Maps</a></div><div class="sequence"><span>Questions</span><i>→</i><span>Maps</span><i>→</i><span>Intelligence</span><i>→</i><span>Worlds</span></div></div>
+<div class="constellation"><span class="core">AFRICA<br>THE WHOLE</span><span class="node n1">FOOD</span><span class="node n2">KNOWLEDGE</span><span class="node n3">CAPITAL</span><span class="node n4">HEALTH</span><span class="node n5">HUMAN</span><span class="node n6">TECH</span><span class="node n7">GOVERNANCE</span><span class="node n8">ENERGY</span><span class="node n9">MOVEMENT</span><div class="caption"><span>The whole becomes visible through connection.</span><span>MAP / 00</span></div></div></section>
+<section class="principles shell"><article><span>01</span><p><b>The container was not the beginning.</b>The questions were.</p></article><article><span>02</span><p><b>We don't study industries.</b>We study relationships.</p></article><article><span>03</span><p><b>Technology is an amplifier.</b>Not the foundation.</p></article></section>
+<section class="engine shell" id="engine"><div class="heading"><div><p class="mono">01 / THE ATLAS ENGINE</p><h2>From questions<br><span class="gold">to worlds.</span></h2></div><p>Explore the whole ideology in one place. No six-screen manifesto required.</p></div><div class="console"><div class="tabs" role="tablist"><button class="tab active" data-tab="premise"><span>01</span>Premise</button><button class="tab" data-tab="method"><span>02</span>Method</button><button class="tab" data-tab="systems"><span>03</span>Systems</button><button class="tab" data-tab="build"><span>04</span>Build</button><button class="tab" data-tab="ecosystem"><span>05</span>Ecosystem</button></div><div>
+<article class="panel" data-panel="premise"><p class="mono">THE PREMISE</p><h3>Africa is not a collection of sectors. <span class="gold">It is a living field.</span></h3><p class="lead">Food, health, land, logistics, capital, governance, culture, energy, technology, knowledge and human life continuously shape one another. African Atlas exists to make those relationships legible.</p><div class="flow"><span>Fragment</span><i>→</i><span>Relationship</span><i>→</i><span>System</span><i>→</i><span>Leverage</span><i>→</i><span>Possibility</span></div><blockquote>The whole becomes visible through connection.</blockquote></article>
+<article class="panel" data-panel="method" hidden><p class="mono">THE GENERATIVE METHOD</p><h3>The Atlas does not begin with a company. <span class="gold">It begins with a question.</span></h3><div class="flow"><span>Question</span><i>→</i><span>Research</span><i>→</i><span>Create</span><i>→</i><span>Observe</span><i>→</i><span>Integrate</span><i>→</i><span>System emerges</span></div><div class="twocol"><div class="tile"><strong>Research is not passive.</strong><p>Maps, interviews, field observation, data and history reveal how a system actually behaves.</p></div><div class="tile"><strong>Creation is a way of thinking.</strong><p>Prototypes, repositories, websites, tools and frameworks are experiential hypotheses — ways to discover what the system is asking for.</p></div></div></article>
+<article class="panel" data-panel="systems" hidden><div class="systems"><div><p class="mono">THE SYSTEMS LENS</p><h3>Nothing is separate.</h3><p class="lead" id="sysText">Food connects land, water, health, trade, culture, capital, energy and movement.</p><div class="chips"><button class="chip active" data-system="food">Food</button><button class="chip" data-system="movement">Movement</button><button class="chip" data-system="capital">Capital</button><button class="chip" data-system="health">Health</button><button class="chip" data-system="knowledge">Knowledge</button><button class="chip" data-system="technology">Technology</button><button class="chip" data-system="governance">Governance</button><button class="chip" data-system="energy">Energy</button><button class="chip" data-system="human">Human</button></div></div><div class="mini"><span class="core">AFRICA</span><span class="node n1 o-food active">FOOD</span><span class="node n2 o-knowledge">KNOWLEDGE</span><span class="node n3 o-capital">CAPITAL</span><span class="node n4 o-health">HEALTH</span><span class="node n5 o-human">HUMAN</span><span class="node n6 o-technology">TECH</span><span class="node n7 o-governance">GOV</span><span class="node n8 o-energy">ENERGY</span><span class="node n9 o-movement">MOVEMENT</span></div></div></article>
+<article class="panel" data-panel="build" hidden><p class="mono">FROM UNDERSTANDING TO BUILDING</p><h3>Real systems first. <span class="gold">Technology enhanced. Intelligence driven.</span></h3><div class="layers"><div class="tile"><small>01 / PHYSICAL</small><strong>Physical</strong><p>Land, hubs, movement, care, production, places and tangible infrastructure.</p></div><div class="tile"><small>02 / HUMAN</small><strong>Human</strong><p>People, trust, craft, local knowledge, processes and stewardship.</p></div><div class="tile"><small>03 / INTELLIGENCE</small><strong>Intelligence</strong><p>Patterns, data, institutional memory, decisions, coordination and learning.</p></div><div class="tile"><small>04 / TECHNOLOGY</small><strong>Technology</strong><p>Tools that amplify durable systems without becoming their only source of value.</p></div></div><div class="flow"><span>Knowledge</span><i>→</i><span>Intelligence</span><i>→</i><span>Ventures</span><i>→</i><span>Infrastructure</span><i>→</i><span>Institution</span></div></article>
+<article class="panel" data-panel="ecosystem" hidden><p class="mono">THE CONTAINER</p><h3>One worldview. <span class="gold">Many expressions.</span></h3><p class="lead">African Atlas is designed to grow without forcing everything into one company or one industry. Different forms can remain connected through one underlying worldview.</p><div class="ecosystem"><div class="tile"><small>PUBLIC LAYER</small><strong>Maps & Research</strong><p>Questions, investigations, frameworks and shared understanding.</p></div><div class="tile"><small>CREATION LAYER</small><strong>Labs & Experiments</strong><p>Human-first R&D, prototypes, tools and new operating models.</p></div><div class="tile"><small>VENTURE LAYER</small><strong>Companies & Partnerships</strong><p>Build, co-found, partner or acquire where meaningful leverage appears.</p></div><div class="tile"><small>REAL-WORLD LAYER</small><strong>Infrastructure & Places</strong><p>Physical, human and commercial systems that endure beyond software.</p></div><div class="tile"><small>INTELLIGENCE LAYER</small><strong>Atlas Intelligence</strong><p>Connected knowledge, signals and decision infrastructure across systems.</p></div><div class="tile"><small>STEWARDSHIP LAYER</small><strong>Capital & Governance</strong><p>Allocate resources, select leaders and preserve coherence over decades.</p></div></div></article>
+</div></div></section>
+<section class="maps shell" id="maps"><div class="heading"><div><p class="mono">02 / MAPS</p><h2>The first public<br><span class="gold">expression.</span></h2></div><p>The publication is the doorway. Each Map begins with one important question and leaves behind a clearer mental model of how the system works.</p></div><div class="rail"><article class="card"><div class="cardtop"><span>MAP 001</span><span>FOUNDATIONS</span></div><div class="cardbody"><h3>Why don't more African businesses scale?</h3><p>Capital × movement × systems × trust × infrastructure.</p></div><div class="cardfoot"><span>Investigation / forthcoming</span><span>↗</span></div></article><article class="card"><div class="cardtop"><span>MAP 002</span><span>FOOD</span></div><div class="cardbody"><h3>How does food actually move?</h3><p>From soil to aggregation to movement to market.</p></div><div class="cardfoot"><span>Field map</span><span>↗</span></div></article><article class="card"><div class="cardtop"><span>MAP 003</span><span>TRUST</span></div><div class="cardbody"><h3>What is the economics of trust?</h3><p>How relationships become infrastructure.</p></div><div class="cardfoot"><span>Systems note</span><span>↗</span></div></article><article class="card"><div class="cardtop"><span>MAP 004</span><span>MOVEMENT</span></div><div class="cardbody"><h3>What makes a corridor become an economy?</h3><p>Roads × trade × people × time × information.</p></div><div class="cardfoot"><span>Network map</span><span>↗</span></div></article></div></section>
+<section class="closing shell" id="join"><div><p class="mono">03 / THE LONG VIEW</p><h2>Understand the system.<br><span class="gold">Then build what should exist.</span></h2><p>African Atlas begins with Maps, but the horizon is much larger: knowledge, intelligence, ventures, physical infrastructure, capital, places and institutional stewardship.</p></div><form class="join" id="joinForm"><p class="mono">BECOME AN EXPLORER</p><label>Email</label><input id="email" type="email" placeholder="you@somewhere.world" required><button class="cta primary" type="submit">Join the Atlas <span>↗</span></button><small id="note">Prototype signup — mailing infrastructure comes next.</small></form></section>
+</main>
+<footer class="shell"><div><strong>The African Atlas</strong><br>Mapping the systems shaping Africa's future.</div><div class="links"><a href="#engine">Atlas Engine</a><a href="#maps">Maps</a><a href="#join">Join</a></div><div class="meta">AFRICA / WORLD · EST. 2026 · FROM QUESTIONS TO WORLDS</div></footer>
+<script>
+const root=document.documentElement,theme=document.getElementById('theme'),motion=document.getElementById('motion');const saved=localStorage.getItem('atlas-theme');if(saved)root.dataset.theme=saved;theme.textContent=root.dataset.theme==='dark'?'Light':'Dark';theme.onclick=()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';localStorage.setItem('atlas-theme',root.dataset.theme);theme.textContent=root.dataset.theme==='dark'?'Light':'Dark'};let moving=true;motion.onclick=()=>{moving=!moving;document.querySelectorAll('.constellation .node').forEach(n=>n.style.animation=moving?'':'none');motion.textContent=moving?'Motion':'Motion off'};
+const tabs=[...document.querySelectorAll('.tab')],panels=[...document.querySelectorAll('.panel')];tabs.forEach(t=>t.onclick=()=>{tabs.forEach(x=>x.classList.toggle('active',x===t));panels.forEach(p=>p.hidden=p.dataset.panel!==t.dataset.tab)});
+const data={food:'Food connects land, water, health, trade, culture, capital, energy and movement.',movement:'Movement determines access: who reaches markets, care, opportunity and one another.',capital:'Capital reveals what a system can fund, scale, maintain and imagine.',health:'Health emerges from food, environment, knowledge, care, work and infrastructure.',knowledge:'Knowledge is memory plus possibility: research, education, local intelligence and what a system learns about itself.',technology:'Technology should amplify durable human and physical systems — not become their only source of value.',governance:'Rules, trust and institutions shape how every other system can move.',energy:'Energy is permission to operate: production, care, movement, cold chains, communication and industry depend on it.',human:'Human life is not the edge case. It is the reason the system exists.'};document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===c));document.getElementById('sysText').textContent=data[c.dataset.system];document.querySelectorAll('.mini .node').forEach(n=>n.classList.toggle('active',n.classList.contains('o-'+c.dataset.system)))});
+document.getElementById('joinForm').onsubmit=e=>{e.preventDefault();const v=document.getElementById('email').value.trim();if(v){document.getElementById('note').textContent='You’re on the prototype explorer list: '+v;e.currentTarget.querySelector('button').textContent='Recorded ✓'}};
+</script>
+</body></html>
