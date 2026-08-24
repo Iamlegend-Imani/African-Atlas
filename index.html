@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-motion="on">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The African Atlas maps the interconnected systems shaping Africa's future — one question, one map, one system at a time." />
+  <meta name="theme-color" content="#f4efe3" />
+  <title>The African Atlas — Mapping the Systems Shaping Africa's Future</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="The African Atlas home">
+      <span class="brand-mark" aria-hidden="true">AA</span>
+      <span class="brand-copy"><strong>The African Atlas</strong><small>Institution in formation</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#atlas">Atlas</a>
+      <a href="#systems">Systems</a>
+      <a href="#method">Method</a>
+      <a href="#future">Future</a>
+    </nav>
+
+    <div class="controls">
+      <button class="control" id="motionToggle" type="button" aria-pressed="false" title="Toggle motion">Motion</button>
+      <button class="control" id="themeToggle" type="button" aria-pressed="false" title="Toggle theme">Dark</button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav" hidden>
+    <a href="#atlas">Atlas</a>
+    <a href="#systems">Systems</a>
+    <a href="#method">Method</a>
+    <a href="#future">Future</a>
+  </div>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">A living map of an interconnected continent</p>
+        <h1>The African<br><em>Atlas.</em></h1>
+        <p class="hero-line">Mapping the systems shaping Africa's future.</p>
+        <p class="hero-body">Africa is not a collection of isolated industries, markets or problems. It is a living network of people, infrastructure, capital, knowledge, culture and movement. The African Atlas exists to make those relationships visible.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#atlas">Enter the Atlas <span>↘</span></a>
+          <a class="button ghost" href="#manifesto">Read the premise</a>
+        </div>
+        <div class="hero-note">
+          <span>01</span>
+          <p>The publication is the first layer.<br>The institution is the larger idea.</p>
+        </div>
+      </div>
+
+      <div class="hero-map reveal" aria-label="Abstract network map of Africa's interconnected systems">
+        <div class="map-frame">
+          <svg class="africa-network" viewBox="0 0 560 690" role="img" aria-labelledby="mapTitle mapDesc">
+            <title id="mapTitle">The African Atlas systems network</title>
+            <desc id="mapDesc">An abstract Africa-shaped constellation of connected nodes representing food, logistics, capital, health, energy, knowledge and technology systems.</desc>
+            <defs>
+              <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="currentColor" stroke-opacity=".08" stroke-width="1"/></pattern>
+            </defs>
+            <rect width="560" height="690" fill="url(#grid)" opacity=".8"/>
+            <g class="contours" fill="none" stroke="currentColor" stroke-opacity=".11">
+              <path d="M146 78C228 35 353 42 436 110s91 166 50 228c-35 53-86 69-100 129-11 48 2 96-35 143-43 55-103 57-147 24-52-39-41-99-64-147-25-53-78-68-85-132-7-65 45-88 41-145-5-64-7-94 50-132z"/>
+              <path d="M165 101c71-37 176-30 242 25 68 56 72 142 42 192-31 51-80 66-95 124-13 49 1 87-31 126-33 41-81 45-117 17-43-33-36-83-57-124-24-47-67-62-74-113-7-54 39-76 37-126-3-55 4-89 53-121z"/>
+              <path d="M194 132c57-25 134-15 184 27 51 43 57 103 35 144-25 48-70 64-85 109-16 45-2 76-27 105-25 29-59 29-85 7-31-26-30-64-48-96-22-39-55-56-57-95-2-40 32-59 34-95 3-42 11-81 49-106z"/>
+            </g>
+            <g class="routes" fill="none" stroke="currentColor" stroke-width="1.3" stroke-opacity=".45">
+              <path d="M158 145Q245 205 338 178Q420 154 462 246"/>
+              <path d="M126 266Q220 249 286 324T431 390"/>
+              <path d="M181 421Q257 368 344 435T331 603"/>
+              <path d="M210 166Q194 281 260 366T257 572"/>
+              <path d="M383 215Q345 286 347 355T398 495"/>
+              <path d="M150 336Q252 317 354 357Q417 382 437 452"/>
+              <path d="M256 250Q312 219 372 258"/>
+              <path d="M206 501Q271 479 337 510"/>
+            </g>
+            <g class="nodes" fill="currentColor" filter="url(#glow)">
+              <circle cx="158" cy="145" r="5"/><circle cx="210" cy="166" r="4"/><circle cx="338" cy="178" r="5"/><circle cx="383" cy="215" r="4"/><circle cx="462" cy="246" r="5"/>
+              <circle cx="126" cy="266" r="4"/><circle cx="256" cy="250" r="4"/><circle cx="372" cy="258" r="5"/><circle cx="150" cy="336" r="5"/><circle cx="286" cy="324" r="6"/>
+              <circle cx="347" cy="355" r="5"/><circle cx="431" cy="390" r="4"/><circle cx="181" cy="421" r="4"/><circle cx="260" cy="366" r="5"/><circle cx="344" cy="435" r="5"/>
+              <circle cx="437" cy="452" r="4"/><circle cx="206" cy="501" r="5"/><circle cx="337" cy="510" r="5"/><circle cx="257" cy="572" r="4"/><circle cx="331" cy="603" r="5"/>
+            </g>
+            <g class="map-labels">
+              <text x="70" y="118">KNOWLEDGE</text><text x="380" y="125">CAPITAL</text><text x="73" y="315">FOOD</text><text x="365" y="330">LOGISTICS</text><text x="85" y="472">HUMAN</text><text x="364" y="484">ENERGY</text><text x="207" y="646">COMMERCE</text>
+            </g>
+          </svg>
+          <div class="map-caption"><span>System map / 00</span><span>Move across the network</span></div>
+          <div class="cursor-orbit" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement shell reveal" id="manifesto">
+      <p class="section-index">00 / PREMISE</p>
+      <div class="statement-grid">
+        <h2>We have spent too long looking at Africa <em>in fragments.</em></h2>
+        <div class="statement-copy">
+          <p>Agriculture separated from logistics. Technology separated from people. Capital separated from infrastructure. Health separated from food. Policy separated from lived reality.</p>
+          <p><strong>But nothing exists in isolation.</strong> The unit of understanding is not the sector. It is the relationship.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="systems shell" id="systems">
+      <div class="section-heading reveal">
+        <p class="section-index">01 / SYSTEMS</p>
+        <h2>One continent.<br><em>Many living systems.</em></h2>
+        <p>Choose a system. Watch what it touches.</p>
+      </div>
+
+      <div class="system-explorer reveal">
+        <div class="system-stage" id="systemStage">
+          <svg viewBox="0 0 900 520" aria-hidden="true" class="system-lines" id="systemLines"></svg>
+          <button class="system-node central" data-system="africa" style="--x:50%;--y:50%"><strong>Africa</strong><small>the whole</small></button>
+          <button class="system-node" data-system="food" style="--x:17%;--y:22%"><strong>Food</strong><small>grow · move · nourish</small></button>
+          <button class="system-node" data-system="logistics" style="--x:49%;--y:14%"><strong>Logistics</strong><small>movement · access</small></button>
+          <button class="system-node" data-system="capital" style="--x:81%;--y:25%"><strong>Capital</strong><small>fund · allocate · compound</small></button>
+          <button class="system-node" data-system="health" style="--x:14%;--y:68%"><strong>Health</strong><small>care · vitality</small></button>
+          <button class="system-node" data-system="knowledge" style="--x:43%;--y:82%"><strong>Knowledge</strong><small>learn · research · transmit</small></button>
+          <button class="system-node" data-system="technology" style="--x:75%;--y:72%"><strong>Technology</strong><small>amplify · connect</small></button>
+          <button class="system-node" data-system="governance" style="--x:88%;--y:49%"><strong>Governance</strong><small>rules · trust · institutions</small></button>
+          <button class="system-node" data-system="energy" style="--x:29%;--y:45%"><strong>Energy</strong><small>power · enable</small></button>
+          <button class="system-node" data-system="commerce" style="--x:65%;--y:46%"><strong>Commerce</strong><small>exchange · scale</small></button>
+        </div>
+        <div class="system-readout">
+          <span id="readoutIndex">SYSTEM 00</span>
+          <h3 id="readoutTitle">Everything is connected.</h3>
+          <p id="readoutBody">The Atlas begins by refusing the false separation between sectors. Every system creates pressure, possibility and feedback in every other system.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="atlas shell" id="atlas">
+      <div class="section-heading split reveal">
+        <div><p class="section-index">02 / THE ATLAS</p><h2>One question.<br><em>One map.</em></h2></div>
+        <p>The first public expression of African Atlas is simple: ask better questions, trace the relationships, and leave behind a map someone else can use.</p>
+      </div>
+
+      <div class="maps-grid">
+        <article class="map-card feature reveal">
+          <div class="topo"></div>
+          <div class="map-card-top"><span>MAP 001</span><span>FOUNDATIONS</span></div>
+          <div class="map-card-content"><h3>Why don't more African businesses scale?</h3><p>Capital × logistics × systems × trust × infrastructure.</p></div>
+          <div class="map-card-foot"><span>Investigation / forthcoming</span><span>↗</span></div>
+        </article>
+        <article class="map-card reveal">
+          <div class="topo"></div><div class="map-card-top"><span>MAP 002</span><span>FOOD</span></div><div class="map-card-content"><h3>How does food actually move?</h3><p>From soil to aggregation to movement to market.</p></div><div class="map-card-foot"><span>Field map</span><span>↗</span></div>
+        </article>
+        <article class="map-card reveal">
+          <div class="topo"></div><div class="map-card-top"><span>MAP 003</span><span>TRUST</span></div><div class="map-card-content"><h3>What is the economics of trust?</h3><p>How relationships become infrastructure.</p></div><div class="map-card-foot"><span>Systems note</span><span>↗</span></div>
+        </article>
+        <article class="map-card reveal">
+          <div class="topo"></div><div class="map-card-top"><span>MAP 004</span><span>MOVEMENT</span></div><div class="map-card-content"><h3>What makes a corridor become an economy?</h3><p>Roads × trade × people × time × information.</p></div><div class="map-card-foot"><span>Network map</span><span>↗</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="method shell" id="method">
+      <div class="section-heading reveal">
+        <p class="section-index">03 / METHOD</p>
+        <h2>Map what is.<br><em>See what could be.</em></h2>
+      </div>
+      <div class="method-track reveal">
+        <div class="method-step"><span>01</span><h3>Question</h3><p>Begin with a question worth understanding.</p></div>
+        <div class="method-step"><span>02</span><h3>Map</h3><p>Trace the actors, flows, incentives and constraints.</p></div>
+        <div class="method-step"><span>03</span><h3>Connect</h3><p>Reveal relationships across systems that appear separate.</p></div>
+        <div class="method-step"><span>04</span><h3>Find leverage</h3><p>Identify where a small shift can change the larger system.</p></div>
+        <div class="method-step"><span>05</span><h3>Build</h3><p>Turn understanding into ventures, infrastructure and tools.</p></div>
+        <div class="method-step"><span>06</span><h3>Steward</h3><p>Keep the whole coherent as the ecosystem grows.</p></div>
+      </div>
+    </section>
+
+    <section class="future shell" id="future">
+      <div class="future-intro reveal">
+        <p class="section-index">04 / WHAT THIS BECOMES</p>
+        <h2>The publication is the doorway.<br><em>Not the destination.</em></h2>
+        <p>African Atlas starts by making systems legible. Over time, that understanding can become intelligence, ventures, infrastructure and institutions that exist in the physical world—not only on a screen.</p>
+      </div>
+
+      <div class="layers reveal">
+        <article><span>01</span><div><h3>Knowledge</h3><p>Maps, research, questions, frameworks and field understanding.</p></div><small>SEE</small></article>
+        <article><span>02</span><div><h3>Intelligence</h3><p>Patterns, data, decision tools and shared institutional memory.</p></div><small>UNDERSTAND</small></article>
+        <article><span>03</span><div><h3>Ventures</h3><p>Build and connect companies where the maps reveal real leverage.</p></div><small>CREATE</small></article>
+        <article><span>04</span><div><h3>Infrastructure</h3><p>Durable systems that continue creating value with or without technology.</p></div><small>ENDURE</small></article>
+      </div>
+
+      <div class="institution reveal">
+        <p class="kicker">AN INSTITUTION IN FORMATION</p>
+        <h3>Not a media company.<br>Not a tech company.<br><em>A container for connected possibility.</em></h3>
+        <p>The Atlas can hold many expressions without becoming fragmented: research, systems thinking, technology, physical infrastructure, commercial ventures, capital and human flourishing. Different forms. One worldview.</p>
+      </div>
+    </section>
+
+    <section class="manifesto shell reveal">
+      <p class="section-index">05 / MANIFESTO</p>
+      <div class="manifesto-text">
+        <p>Food connects to health.</p>
+        <p>Health connects to knowledge.</p>
+        <p>Knowledge connects to technology.</p>
+        <p>Technology connects to commerce.</p>
+        <p>Commerce connects to movement.</p>
+        <p>Movement connects to infrastructure.</p>
+        <p>Infrastructure connects to capital.</p>
+        <p>Capital connects to possibility.</p>
+        <p class="accent">Nothing is separate.</p>
+      </div>
+      <div class="manifesto-end">
+        <p>To understand Africa, we have to understand the relationships between its systems.</p>
+        <strong>One question. One map. One connected continent.</strong>
+      </div>
+    </section>
+
+    <section class="join shell reveal">
+      <div><p class="section-index">06 / BEGIN HERE</p><h2>Become an<br><em>Explorer.</em></h2></div>
+      <form class="join-form" id="joinForm">
+        <p>Join the first people following the Atlas as it takes shape. No noise. Just new Maps and significant developments.</p>
+        <label><span>Email</span><input type="email" id="email" placeholder="you@somewhere.world" required></label>
+        <button class="button primary" type="submit">Join the Atlas <span>↗</span></button>
+        <small id="formNote">Prototype signup — mailing infrastructure comes next.</small>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <div><span class="brand-mark">AA</span><p><strong>The African Atlas</strong><br>Mapping the systems shaping Africa's future.</p></div>
+    <div class="footer-links"><a href="#atlas">Maps</a><a href="#systems">Systems</a><a href="#method">Method</a><a href="#manifesto">Manifesto</a></div>
+    <div class="footer-meta"><span>AFRICA / WORLD</span><span>EST. 2026</span><span>BUILDING SLOWLY, THINKING LONG</span></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
